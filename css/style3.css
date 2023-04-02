@@ -1,0 +1,662 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: black;
+    max-height: 100vh;
+
+}
+
+section {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section::before {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(#ffc107, #e91e63);
+    border-radius: 50%;
+    transform: translate(-250px, -120px);
+    animation: animatecolor 5s linear infinite;
+    animation: rotate 25s linear infinite;
+    box-shadow: inset 2px 2px 10px rgba(255, 0, 0, 0.5);
+}
+
+section::after {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: linear-gradient(#3407ff, #fa034d);
+    border-radius: 50%;
+    transform: translate(250px, 120px);
+    animation: rotate1 20s linear infinite;
+    box-shadow: inset 1px 1px 10px rgba(255, 0, 0, 0.5);
+
+}
+
+@keyframes rotate {
+    0% {
+        transform: translateX(0px) translateY(0px);
+        filter: hue-rotate(0deg);
+    }
+
+    20% {
+        transform: translateX(-705px) translateY(-320px);
+    }
+
+    40% {
+        transform: translateX(550px) translateY(-100px);
+    }
+
+    60% {
+        transform: translateX(-100px) translateY(230px);
+    }
+
+    80% {
+        transform: translateX(600px) translateY(350px);
+    }
+
+    100% {
+        transform: translateX(0px) translateY(0px);
+        filter: hue-rotate(360deg);
+
+    }
+}
+
+@keyframes rotate1 {
+
+    0% {
+        transform: translateX(0px) translateY(0px);
+        filter: hue-rotate(0deg);
+    }
+
+    20% {
+        transform: translateX(705px) translateY(320px);
+    }
+
+    40% {
+        transform: translateX(430px) translateY(100px);
+    }
+
+    60% {
+        transform: translateX(200px) translateY(-230px);
+    }
+
+    80% {
+        transform: translateX(-600px) translateY(-150px);
+    }
+
+    100% {
+        transform: translateX(0px) translateY(0px);
+        filter: hue-rotate(360deg);
+
+    }
+}
+ .full
+ {
+     display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+
+.block {
+    position: absolute;
+    top: 100px;
+    left: 580px;
+    border: 1px solid white;
+    width: 380px;
+    height: 580px;
+    background: rgba(32, 1, 1, 0.1);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    color: white;
+    z-index: 1000;
+}
+
+.block .login h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin: 20px 0 20px 0;    
+}
+
+.block .login .formulaire {
+    text-align: center;
+    
+}
+
+.block .login .formulaire .condition #cdc
+{
+ font-size: 10px;
+
+}
+
+.block .login .formulaire .input #ident,
+.block .login .formulaire .input #password,
+.block .login .formulaire .input #email,
+.block .login .formulaire .input #anniversaire,
+.block .login .formulaire .input #telephone
+ {
+    background: rgba(253, 253, 253, 0.199);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: none;
+    font-size: 1em;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    color: rgba(255, 255, 255, 0.568);
+    margin-bottom: 10px;
+}
+
+
+.block .login .formulaire .input #password {
+    margin-left: 20px;
+}
+
+.block .login .formulaire #eye {
+    filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(100deg) brightness(10019%) contrast(11009%);
+    cursor: pointer;
+}
+
+.block .login .formulaire #envoyer {
+    background: none;
+    border: none;
+    font-size: 1.3em;
+    color: white;
+}
+
+
+.block .login .formulaire .container a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 30px;
+    border: none;
+    margin: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: white;
+    border-radius: 10%;
+    transition: 0.5s;
+    transition-delay: 0s;
+}
+
+.block .login .formulaire .container a:hover {
+    transition-delay: 0.8s;
+    color: black;
+    border-radius: 10%;
+
+}
+
+
+.block .login .formulaire .container a span {
+    position: relative;
+    
+    z-index: 100;
+}
+
+.block .login .formulaire .container a:nth-child(2) {
+    filter: hue-rotate(80deg);
+}
+
+.block .login .formulaire .container a::before {
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 2px;
+    background: #0f0;
+    box-shadow: 5px -8px 0 #0f0,
+        5px 8px 0 #0f0;
+    transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+    transition-delay: 0.5s, 0.5s, 0s, 0s;
+}
+
+.block .login .formulaire .container a:hover::before {
+    width: 60%;
+    height: 105%;
+    left: -2px;
+    box-shadow: 5px 0 0 #0f0,
+        5px 0 0 #0f0;
+    transition-delay: 0s, 0.5s, 0.5s, 0.5s;
+    border-radius: 20%;
+}
+
+.block .login .formulaire .container a::after {
+    content: "";
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 2px;
+    background: #0f0;
+    box-shadow: -5px -8px 0 #0f0,
+        -5px 8px 0 #0f0;
+    transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+    transition-delay: 0.5s, 0.5s, 0s, 0s;
+}
+
+.block .login .formulaire .container a:hover::after {
+    width: 60%;
+    height: 105%;
+    right: -2px;
+    box-shadow: -5px 0 0 #0f0,
+        -5px 0 0 #0f0;
+    transition-delay: 0s, 0.5s, 0.5s, 0.5s;
+    border-radius: 20%;
+}
+
+
+
+fieldset {
+    border: none;
+}
+
+.image img {
+    position: absolute;
+    width: 250px;
+    height: 100px;
+    top: 2px;
+    left: 650px;
+}
+
+.block2 {
+    position: absolute;
+    
+    top: 230px;
+    left: 280px;
+    border: 1px solid white;
+    width: 300px;
+    height: 270px;
+    background: rgba(0, 157, 255, 0.615);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-top-left-radius: 10%;
+    border-bottom-left-radius: 10%;
+    backdrop-filter: blur(10px);
+    color: white;
+    z-index: 10;
+}
+
+.block2 .inscrit {
+    position: fixed;
+
+    margin-top: 80px;
+
+}
+
+.block2 .inscrit h3 {
+
+    margin-top: -30px;
+    font-size: 1.4em;
+    text-align: center;
+
+}
+
+.block2 .inscrit .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.block2 .inscrit .container a {
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    border: none;
+    margin: 40px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: white;
+    border-radius: 10%;
+
+    transition: 0.5s;
+    transition-delay: 0s;
+}
+
+.block2 .inscrit .container a:hover {
+    transition-delay: 0.8s;
+    color: black;
+    border-radius: 10%;
+
+}
+
+.block2 .inscrit .container a span {
+    position: relative;
+    z-index: 100;
+}
+
+.block2 .inscrit .container a:nth-child(2) {
+    filter: hue-rotate(80deg);
+}
+
+.block2 .inscrit .container a::before {
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 2px;
+    background: #ff5900;
+    box-shadow: 5px -8px 0 #ff5900,
+        5px 8px 0 #ff5900;
+    transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+    transition-delay: 0.5s, 0.5s, 0s, 0s;
+}
+
+.block2 .inscrit .container a:hover::before {
+    width: 60%;
+    height: 105%;
+    left: -2px;
+    box-shadow: 5px 0 0 #ff5900,
+        5px 0 0 #ff5900;
+    transition-delay: 0s, 0.5s, 0.5s, 0.5s;
+    border-radius: 20%;
+}
+
+.block2 .inscrit .container a::after {
+    content: "";
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 2px;
+    background: #ff5900;
+    box-shadow: -5px -8px 0 #ff5900,
+        -5px 8px 0 #ff5900;
+    transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+    transition-delay: 0.5s, 0.5s, 0s, 0s;
+}
+
+.block2 .inscrit .container a:hover::after {
+    width: 60%;
+    height: 105%;
+    right: -2px;
+    box-shadow: -5px 0 0 #ff5900,
+        -5px 0 0 #ff5900;
+    transition-delay: 0s, 0.5s, 0.5s, 0.5s;
+    border-radius: 20%;
+}
+
+.block2 .inscrit .ins {
+    background: none;
+    border: none;
+    font-size: 1em;
+}
+
+
+@media all and (min-width: 480px) and (max-width: 600px) {
+
+    body {
+        background: black;
+        max-height: 120vh;
+
+    }
+
+    section {
+        position: relative;
+        min-height: 120vh;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    section::before {
+        width: 200px;
+        height: 200px;
+    }
+
+    section::after {
+        width: 150px;
+        height: 150px;
+    }
+
+
+
+    .block {
+        top: 130px;
+        left: 50px;
+    }
+
+    .image img {
+        left: 110px;
+    }
+
+    .block2 {
+        left: 90px;
+        top: 712px;
+        border-bottom-left-radius: 10%;
+        border-top-left-radius: 0%;
+        border-bottom-right-radius: 10%
+    }
+
+
+}
+
+@media all and (min-width: 600px) and (max-width: 800px) {
+
+    body {
+        background: black;
+        max-height: 120vh;
+
+    }
+
+    section {
+        position: relative;
+        min-height: 120vh;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    section::before {
+        width: 250px;
+        height: 250px;
+    }
+
+    section::after {
+        width: 200px;
+        height: 200px;
+    }
+
+
+
+
+    .image img {
+        left: 235px;
+    }
+
+    .block {
+
+        left: 170px;
+    }
+
+    .block2 {
+        left: 212px;
+        top: 682px;
+        border-bottom-left-radius: 10%;
+        border-top-left-radius: 0%;
+        border-bottom-right-radius: 10%
+    }
+}
+
+
+@media all and (min-width: 800px) and (max-width: 950px) {
+
+    body {
+        background: black;
+        max-height: 120vh;
+
+    }
+
+    section {
+        position: relative;
+        min-height: 120vh;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    section::before {
+        width: 300px;
+        height: 300px;
+    }
+
+    section::after {
+        width: 250px;
+        height: 250px;
+    }
+
+
+
+    .image img {
+        left: 260px;
+    }
+
+    .block {
+
+        left: 193px;
+    }
+
+    .block2 {
+        left: 235px;
+        top: 682px;
+        border-bottom-left-radius: 10%;
+        border-top-left-radius: 0%;
+        border-bottom-right-radius: 10%
+    }
+
+
+}
+
+
+@media all and (min-width: 950px) and (max-width: 1150px) {
+
+
+    body {
+        background: black;
+        max-height: 120vh;
+
+    }
+
+    section {
+        position: relative;
+        min-height: 120vh;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    section::before {
+        width: 350px;
+        height: 350px;
+    }
+
+    section::after {
+        width: 300px;
+        height: 300px;
+    }
+
+
+
+    .image img {
+        left: 360px;
+    }
+
+    .block {
+
+        left: 290px;
+    }
+
+    .block2 {
+        left: 330px;
+        top: 682px;
+        border-bottom-left-radius: 10%;
+        border-top-left-radius: 0%;
+        border-bottom-right-radius: 10%
+    }
+
+
+}
+
+
+@media all and (min-width: 1150px) and (max-width: 1280px) {
+
+    body {
+        background: black;
+        max-height: 120vh;
+
+    }
+
+    section {
+        position: relative;
+        min-height: 120vh;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    section::before {
+        width: 400px;
+        height: 400px;
+    }
+
+    section::after {
+        width: 350px;
+        height: 350px;
+    }
+
+
+
+    .image img {
+        left: 468px;
+    }
+
+    .block {
+
+        left: 400px;
+    }
+
+    .block2 {
+        left: 440px;
+        top: 682px;
+        border-bottom-left-radius: 10%;
+        border-top-left-radius: 0%;
+        border-bottom-right-radius: 10%
+    }
+
+}

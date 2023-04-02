@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style3.css">
+    
+    <title>Login</title>
+</head>
+
+<body>
+    <section>
+
+    </section>
+    <div class="image">
+        <img src="image/musiczones.png">
+    </div>
+  <div class="full">
+    <div class="block">
+        <div class="login">
+            <h2>Sign Up</h2>
+            <div class="formulaire">
+                <form method="post" action="traitement.php"></form>
+                <fieldset>
+                    
+                    <div class="input">
+                        <h4 class="id">Entrer vôtre Prénom</h4>
+                        <label for="ident"></label>
+                        <input name="ident" id="ident" type="text" placeholder="Ex: Janes" />
+                    </div>
+                    <div class="input">
+                        <h4 class="id">Entrer vôtre Nom</h4>
+                        <label for="ident"></label>
+                        <input name="ident" id="ident" type="text" placeholder="Ex: Sander" />
+                    </div>
+                    <div class="input">
+                        
+                        <p>
+                            <h4 class="mdp">Entrer vôtre E-mail</h4>
+                            <label for="email"></label><!-- l'Email -->
+                            <input type="email" name="email" id="email" placeholder="Ex: abcd@hotmail.com" />
+                        </p>
+                    </div>
+                    <div class="input">
+                        <p>
+                            <h4 class="mdp">Entrer vôtre Numéro de telephone</h4>
+                            <label for="telephone"></label><!-- le numéro de tel -->
+                            <input type="tel" name="telephone" id="telephone" placeholder="Ex: 0658975421" />
+                        </p>
+                    </div>
+                    <div class="input">
+                        <p>
+                            <h4 class="mdp">Entrer vôtre date de naissance</h4>
+                            <label for="anniversaire"></label><!-- date d'anniversaire -->
+                            <input type="date" name="anniversaire" id="anniversaire" />
+                        </p>
+                     </div>
+                    <div class="input">
+                        <h4 class="mdp">Entrer vôtre Mot de Passe</h4>
+                    
+                        <label for="password"></label>
+                        <input name="password" id="password" type="password" placeholder="Ex: Majest321" />
+                        <img src="image/eyefill.svg" id="eye" onclick="changer()" />
+                    </div>
+
+                    </form>
+                    <p class="condition">
+                        <input name="check" id="check" type="checkbox" />
+                        <label id="cdc" for="check">J'ai lu et j'accepte les <a href="document/CGU.pdf"> conditions générales d'utilisation</a> <br /> la politique d'utilisation des données. *</label>
+                    </p>
+
+                    <p>
+                    <div class="container">
+
+                        <a href="indexbis.html"> <span><input id="envoyer" type="submit" value="Confirmer" /></span></a>
+                        </p>
+                    </div>
+                </fieldset>
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="block2">
+        <div class="inscrit">
+            <h3>Tu fais déjà parti de notre communauté !</h3>
+            <br />
+            <div class="container">
+                <button class="ins"><a href="index2.html"><span>Connecte-toi !</span></a></button>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
